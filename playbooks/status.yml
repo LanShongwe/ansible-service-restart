@@ -1,0 +1,18 @@
+---
+- name: Check Tomcat Status
+  hosts: tomcat
+  become: true
+  tasks:
+    - name: Trigger Tomcat Health Check
+      import_role:
+        name: tomcat
+      tags: healthcheck
+
+- name: Check Nginx Status
+  hosts: nginx
+  become: true
+  tasks:
+    - name: Trigger Nginx Health Check
+      import_role:
+        name: nginx
+      tags: healthcheck

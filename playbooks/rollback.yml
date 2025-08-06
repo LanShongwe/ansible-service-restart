@@ -1,0 +1,9 @@
+---
+- name: Rollback Placeholder
+  hosts: all
+  become: true
+  tasks:
+    - name: Print rollback not implemented
+      debug:
+        msg: "Rollback not implemented. Add per-service logic here 
+             (e.g., previous WAR/JAR, DB restore, container reversion)."

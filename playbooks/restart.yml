@@ -1,0 +1,12 @@
+---
+- name: Restart Tomcat
+  hosts: tomcat
+  become: true
+  roles:
+    - tomcat
+
+- name: Restart Nginx
+  hosts: nginx
+  become: true
+  roles:
+    - nginx

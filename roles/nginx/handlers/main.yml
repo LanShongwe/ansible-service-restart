@@ -1,0 +1,9 @@
+---
+- name: Check Nginx Status
+  uri:
+    url: http://localhost
+    status_code: 200
+  register: nginx_status
+  retries: 5
+  delay: 5
+  until: nginx_status.status == 200

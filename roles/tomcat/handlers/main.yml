@@ -1,0 +1,9 @@
+---
+- name: Check Tomcat Status
+  uri:
+    url: http://localhost:8080/
+    status_code: 200
+  register: tomcat_health
+  retries: 5
+  delay: 5
+  until: tomcat_health.status == 200

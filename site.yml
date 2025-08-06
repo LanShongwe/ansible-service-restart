@@ -1,0 +1,12 @@
+---
+- name: Restart and Validate Tomcat
+  hosts: tomcat_servers
+  become: true
+  roles:
+    - tomcat
+
+- name: Restart and Validate Nginx
+  hosts: nginx_servers
+  become: true
+  roles:
+    - nginx

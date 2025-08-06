@@ -1,0 +1,12 @@
+---
+##==## GLOBAL ANSIBLE SETTINGS ##==##
+ansible_user: deploy_user               # Change to your remote SSH user
+ansible_become: true
+
+# Retry and delay settings for service restarts
+service_restart_retries: 5
+service_restart_delay: 5
+
+##==## GLOBAL PORTS (used in defaults as fallbacks) ##==##
+tomcat_port: 8080
+nginx_port: 80
